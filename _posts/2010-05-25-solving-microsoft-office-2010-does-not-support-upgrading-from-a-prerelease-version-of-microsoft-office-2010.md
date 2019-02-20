@@ -1,0 +1,12 @@
+---
+ID: 1429
+post_title: 'Solving: Microsoft Office 2010 does not support upgrading from a prerelease version of Microsoft Office 2010'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2010/05/25/solving-microsoft-office-2010-does-not-support-upgrading-from-a-prerelease-version-of-microsoft-office-2010/
+published: true
+post_date: 2010-05-25 16:58:01
+---
+<p align="left">After removing Microsoft Office 2010 beta 1 from my system I could install Microsoft Office 2010 RTM but not Microsoft Visio 2010 RTM or the SharePoint Designer 2010. </p>  <p align="left"><strong>The setup errors:</strong></p>  <p align="left">Setup is unable to proceed due to the following error(s):</p>  <p align="left">Microsoft Office 2010 does not support upgrading from a prerelease version of Microsoft Office 2010. You must first uninstall any prerelease versions of Microsoft Office 2010 products and associated technologies. Crrect the issue(s) listed above and re-run setup.</p>  <p align="left">&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/05/clip_image002.jpg"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="clip_image002" border="0" alt="clip_image002" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/05/clip_image002_thumb.jpg" width="504" height="233" /></a></p>  <p>&#160;</p>  <p align="left"><strong>Solution</strong></p>  <ul>   <li>     <div align="left">Download the Windows Installer Cleanup Utility setup (msicuu2.exe): <a title="http://download.microsoft.com/download/e/9/d/e9d80355-7ab4-45b8-80e8-983a48d5e1bd/msicuu2.exe" href="http://download.microsoft.com/download/e/9/d/e9d80355-7ab4-45b8-80e8-983a48d5e1bd/msicuu2.exe">http://download.microsoft.com/download/e/9/d/e9d80355-7ab4-45b8-80e8-983a48d5e1bd/msicuu2.exe</a></div>   </li>    <li>     <div align="left">Run the Windows Installer Cleanup Utility setup</div>   </li>    <li>     <div align="left">Run the Windows Installer Cleanup Utility:&#160; “C:\Program Files (x86)\Windows Installer Clean Up\msicuu.exe”</div>   </li>    <li>     <div align="left">Select all beta products and remove them. <strong>In my case it was the Dutch proofing tools, which caused the setup error.</strong></div>   </li> </ul>

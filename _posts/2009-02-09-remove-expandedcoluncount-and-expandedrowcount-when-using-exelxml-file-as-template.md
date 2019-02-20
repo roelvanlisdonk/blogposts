@@ -1,0 +1,12 @@
+---
+ID: 246
+post_title: 'Remove ExpandedColunCount and ExpandedRowCount when using Microsoft Exel (*.xml) file as template'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2009/02/09/remove-expandedcoluncount-and-expandedrowcount-when-using-exelxml-file-as-template/
+published: true
+post_date: 2009-02-09 10:42:14
+---
+<p>When you use a Microsoft Excel &quot;*.xml&quot; file as template for generating Microsoft Excel reports, remove the ss:ExpandedColumnCount=&quot;1&quot; ss:ExpandedRowCount=&quot;1&quot; x:FullColumns=&quot;1&quot; x:FullRows=&quot;1&quot;</p>  <p>from the &lt;Table&gt; tag under the &lt;Worksheet&gt; tag. If you don't remove these counters a error will occur, because the row and or column count is higher then 1:</p>  <p>Problem During Load   <br />Problems came up in the following areas during load:    <br />Worksheet Setting    <br />This file cannot be opened because of errors. Erros are listed in C:\Users......\Content.MSO\7BF935F6.log</p>  <p>&#160;</p>  <p>&lt;Worksheet ss:Name=&quot;Sheet3&quot;&gt;   <br />&#160; &lt;Table <font color="#ff0000">ss:ExpandedColumnCount=&quot;1&quot; ss:ExpandedRowCount=&quot;1&quot; x:FullColumns=&quot;1&quot; x:FullRows=&quot;1&quot;</font>&gt;    <br />&#160; &lt;/Table&gt;    <br />&#160; &lt;WorksheetOptions xmlns=&quot;urn:schemas-microsoft-com:office:excel&quot;&gt;    <br />&#160;&#160; &lt;ProtectObjects&gt;False&lt;/ProtectObjects&gt;    <br />&#160;&#160; &lt;ProtectScenarios&gt;False&lt;/ProtectScenarios&gt;    <br />&#160; &lt;/WorksheetOptions&gt;    <br />&lt;/Worksheet&gt;</p>  <p>&#160;</p>  <p>An other error that can occur is:</p>  <p>XML ERROR in Table   <br />REASON:&#160;&#160;&#160; Bad Value    <br />FILE:&#160;&#160;&#160; C:\Temp\MyTest.xml    <br />GROUP:&#160;&#160;&#160; Table    <br />TAG:&#160;&#160;&#160; Row    <br />ATTRIB:&#160;&#160;&#160; Index    <br />VALUE:&#160;&#160;&#160; 128</p>  <p>&#160;</p>  <p>This was caused by the line:</p>  <p>&lt;ss:Row ss:Index=&quot;128&quot; ss:AutoFitHeight=&quot;0&quot; ss:Height=&quot;12.9375&quot;&gt;   <br /></p>  <p><strong>Cause and solution</strong></p>  <p>The index was not correct, by removing the ss:Index=&quot;128&quot; ss:AutoFitHeight=&quot;0&quot; ss:Height=&quot;12.9375&quot; from the Row tag, the file could be opened correctly again.</p>

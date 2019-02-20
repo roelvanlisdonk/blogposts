@@ -1,0 +1,12 @@
+---
+ID: 2017
+post_title: 'Now I know why the Windows Experience Index does not work, when you boot from VHD: SSD 1048 MB/s write and 1193 MB/s read?'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2011/05/06/now-i-know-why-the-windows-experience-index-does-not-work-when-you-boot-from-vhd-ssd-1048-mbs-write-and-1193-mbs-read/
+published: true
+post_date: 2011-05-06 15:47:51
+---
+<p>If I boot from a VHD file and run the ATTO benchmark on my Vertex 3 OS SSD.</p>  <p>I get the following results: 1048 MB/s write and 1193 MB/s read. Well the Vertex 3 SSD is the fastest SSD I worked with, but this can’t be right.</p>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/05/BenchmarkVertex3BootFromVhd.png" rel="lightbox"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="BenchmarkVertex3BootFromVhd" border="0" alt="BenchmarkVertex3BootFromVhd" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/05/BenchmarkVertex3BootFromVhd_thumb.png" width="473" height="606" /></a></p>  <p>&#160;</p>  <p>When the ATTO benchmark is run from a normal booted system, I get the following results: 503 MB/s write and 557 MB/s read on my DELL XPS L702.x. That’s what I suspected.</p>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/05/image3.png" rel="lightbox"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/05/image_thumb3.png" width="443" height="550" /></a></p>  <p>&#160;</p>  <p>When I benchmark a normal HDD I get: 69 MB/s write and 69 MB/s read.</p>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/05/image4.png" rel="lightbox"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/05/image_thumb4.png" width="444" height="566" /></a></p>

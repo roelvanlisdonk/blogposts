@@ -1,0 +1,14 @@
+---
+ID: 1596
+post_title: >
+  Best practices for using relative paths
+  in CSS, HTML and ASP .NET
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2010/07/08/best-practices-for-using-relative-paths-in-css-html-and-asp-net/
+published: true
+post_date: 2010-07-08 13:52:55
+---
+<p>In many cases, elements or controls on your page must refer to an external resource such as an image or another *.aspx file. To refer to these resources I <strong>prefer to use relative paths</strong>, because on my development machine the URL might be http//:localhost but on the production machine the URL might have a host header, like <a href="http://mywebapp.roelvanlisdonk.nl">http://mywebapp.roelvanlisdonk.nl</a>. or an other port like <a href="http://localhost:81">http://localhost:81</a>.     <br />    <br />When using relative paths there are two kinds of elements</p>  <ul>   <li>Not web server controls like (html tags, css statements etc.)</li>    <li>Web server controls (ASP .NET server controls) </li> </ul>  <p><strong>Not web server controls (html tags, css statements etc.)</strong></p>  <p>Always start an URL with a &quot;/&quot;, no matter where you are in the tree structure, this relative URL will always work</p>  <ul>   <li><font color="#0000ff">&quot;/Images/Logo.png&quot;</font></li>    <li><font color="#0000ff">&lt;img alt=&quot;Logo&quot; src=&quot;/Images/Logo.png&quot; /&gt;</font></li> </ul>  <p>Don’t use:</p>  <ul>   <li>&quot;../&quot; like &quot;../Images/Logo.png&quot;</li>    <li>&quot;no slash at all&quot; like &quot;Images/Logo.png&quot;</li> </ul>  <p>&#160;</p>  <p><strong>Web server controls</strong></p>  <p>Always start an URL with a &quot;~/&quot; </p>  <ul>   <li>     <div align="left"><font color="#0000ff">&quot;~/Images/Logo.png&quot;</font></div>   </li>    <li>     <div align="left"><font color="#0000ff">Response.Redirect(&quot;~/Pages/MyPage.aspx&quot;);</font></div>   </li>    <li>     <div align="left"><font color="#0000ff">&lt;asp:HyperLink ID=&quot;HyperLink1&quot; runat=&quot;server&quot; navigateUrl=&quot;~/Pages/Default.aspx&quot;&gt;Test HyperLink&lt;/asp:HyperLink&gt;</font></div>   </li> </ul>  <p>Don’t use:</p>  <ul>   <li>&quot;/&quot; like &quot;/Images/Logo.png&quot;</li>    <li>&quot;../&quot; like &quot;../Images/Logo.png&quot;</li>    <li>&quot;no slash at all&quot; like &quot;Images/Logo.png&quot;</li> </ul>  <p>&#160;</p>  <p>See: <a title="http://msdn.microsoft.com/en-us/library/ms178116.aspx" href="http://msdn.microsoft.com/en-us/library/ms178116.aspx">http://msdn.microsoft.com/en-us/library/ms178116.aspx</a></p>

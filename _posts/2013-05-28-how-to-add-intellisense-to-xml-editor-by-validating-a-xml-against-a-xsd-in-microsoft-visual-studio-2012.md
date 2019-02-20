@@ -1,0 +1,15 @@
+---
+ID: 3218
+post_title: >
+  How to add IntelliSense to xml editor,
+  by validating a xml against a xsd in
+  Microsoft Visual Studio 2012
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2013/05/28/how-to-add-intellisense-to-xml-editor-by-validating-a-xml-against-a-xsd-in-microsoft-visual-studio-2012/
+published: true
+post_date: 2013-05-28 10:50:11
+---
+<ul>   <li>Open a xml file in Microsoft Visual Studio 2012.</li>    <li>Press F4 (properties windows will open)</li> </ul>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image.png" rel="lightbox"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image_thumb.png" width="469" height="273" /></a></p>  <ul>   <li>Click on Schemas</li> </ul>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image1.png" rel="lightbox"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px 5px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image_thumb1.png" width="516" height="345" /></a></p>  <ul>   <li>Browse to the xsd you want to use</li>    <li>After clicking OK, the xml file will show errors:</li> </ul>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image2.png" rel="lightbox"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image_thumb2.png" width="244" height="124" /></a></p>  <ul>   <li> IntelliSense can be used to correct the errors.</li> </ul>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image3.png" rel="lightbox"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image_thumb3.png" width="244" height="126" /></a></p>  <p>&#160;</p>  <p>Correct result</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image4.png" rel="lightbox"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/05/image_thumb4.png" width="242" height="75" /></a></p>

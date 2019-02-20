@@ -1,0 +1,12 @@
+---
+ID: 4620
+post_title: What I learned today
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2015/09/30/what-i-learned-today-4/
+published: true
+post_date: 2015-09-30 09:36:46
+---
+<p>&#160;</p>  <h2>SE-Radio Episode 238: Linda Rising on the Agile Brain</h2>  <br />  <p><a href="http://www.se-radio.net/2015/09/se-radio-episode-238-linda-rising-on-the-agile-brain/">http://www.se-radio.net/2015/09/se-radio-episode-238-linda-rising-on-the-agile-brain/</a></p>  <ul>   <li>Praise the process, hard work, not the person.</li>    <li>A person can always learn and get better.</li>    <li>If you are the best at something, you are not learning any more (maybe it's time to pick something else up :-))</li>    <li>Offload work to your unconscious mind, it's able to multitask, the conscious mind isn't.</li>    <li>Embrace the fact that you were in 203th place, because this means you can get better.</li>    <li>Embrace hard work, there's nothing like a free meal</li>    <li>This does not mean &quot;do labor intensive work&quot;.</li>    <li>Talent is overrated, yes people are born with a given brain capacity, but people can grow, and surpass people that have bigger brain capacity, but do nothing with it.</li>    <li>Continually do small experiments, instead of a boring retrospective at the end of a sprint.</li> </ul>  <p>&#160;</p>  <p>Some related links from the show:   <br />- Release! – A light card game about software and the people who make it. <a href="http://inedo.com/release">http://inedo.com/release</a>    <br />- Brain Science Podcast <a href="http://brainsciencepodcast.com/">http://brainsciencepodcast.com/</a>    <br />- Radiolab Podcast <a href="http://www.radiolab.org/series/podcasts/">http://www.radiolab.org/series/podcasts/</a>    <br />- Freconomiscs Radio Podcast <a href="http://freakonomics.com/radio/">http://freakonomics.com/radio/</a></p>  <p>&#160;</p>  <p>&#160;</p>  <p>   <br /><strong></strong></p>  <h2>TypeScript</h2>  <p><strong></strong>    <br />In external modules, relationships between files are specified in terms of imports and exports at the file level.    <br />In TypeScript, <strong>any file</strong> containing a <strong>top-level import or export</strong> is <strong>considered an external module</strong>.</p>

@@ -1,0 +1,12 @@
+---
+ID: 476
+post_title: Insert image with TSQL and a hex string
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2009/05/25/insert-image-with-tsql-and-a-hex-string/
+published: true
+post_date: 2009-05-25 13:08:11
+---
+<p>You can insert an image from t-sql script, if you use the hex string notation:    <br />The next line will insert an image representing a &quot;check mark&quot; into the database. In a table [Test] with a column [Image].</p>  <p>insert    <br />&#160;&#160;&#160; [Test]     <br />values(0x89504E470D0A1A0A0000000D49484452000000100000001008060000001FF3FF61000000017352474200AECE1CE90000000467414D410000B18     <br />F0BFC6105000000206348524D00007A26000080840000FA00000080E8000075300000EA6000003A98000017709CBA513C000001B649444154384FA5926B     <br />2F42711CC77924E7BDB8970873DB58AE4B11399CC8359A2754A7D23D86B91C0FCDFD3A5B68AEC36C1E2AC9780DE64D485FFFCEA68D329AB39D87DFCBEFF     <br />3FFA60248F9D71735F8CF9FB458B9D9C035ADD4D83E43933268D9A8E774271A0C1E319072E52C7FFE5FEB37AFD771C3C7DD987F72C27367827A578952778     <br />1F94F068AB55A4EEB5363F6D18199471BBAF65A51E62984C42A14C40CB4D74C65FF05DDFBBD917CB5968B569E0ED93015B2F2C9254E71B8703C4F103B417BC     <br />514F79DD3AFECAD0E8CB779E4D384C0E2060E3B31F5308EC9070B989D16143BF2C305965C5ECC1B0C5E7656F59DB5BF4CF859CC86EC50EDCAC204D6886C5     <br />93AD37F4063226881E79E45C7B602457651586CCE89897983DE5355BAC6D706FDCD10169EDDF0F84DD01EABA13BD5C0E537C2796F04BD2587C4267CCF37     <br />7D15C74EA0F7E5144986EE4CC3DF391934C311D0C3E1D743B5D914851511B1D95F92E376406051B225297ABCED70060CB0DE8DA26D5D06022B223266251     <br />4C7ED40BA584155CF9591CA0A28D71A4160458486CC1FC5098744DE972A71894160BDE5E933D37E1B5AC221115854EE58C6AFE2A4A6FC53930F93387C6A     <br />1968F12D0000000049454E44AE426082)</p>  <p align="left">&#160;</p>  <p align="left"><strong>Note</strong></p>  <p align="left">Some times, Microsoft SQL Server Management Studio will add a &quot;zero&quot; at the beginning, like 0x<strong>0</strong>8950….    <br />In this case add a &quot;zero&quot; at the end of the hex value, like:     <br />insert [Test] values (0x8950……<strong>0</strong>) </p>  <p align="left">Then magically the data will be correctly inserted into the database, see also: <a href="http://stackoverflow.com/questions/2657922/insert-hex-string-value-to-sql-server-image-field-is-appending-extra-0">http://stackoverflow.com/questions/2657922/insert-hex-string-value-to-sql-server-image-field-is-appending-extra-0</a></p>

@@ -1,0 +1,12 @@
+---
+ID: 439
+post_title: 'Expand Collapse DetailView in RadGrid from C# code'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2009/05/22/expand-collapse-detailview-in-radgrid-from-c-code/
+published: true
+post_date: 2009-05-22 13:24:22
+---
+<div class="padten">   <div class="ms-inputuserfield padfive seventyp">     <div>       <div class="ExternalClassDBB482DBBCD944CBA648478E27C0B509">         <p>When using ajax and the Telerik RadGrid control and a DropDownlistbox in the RadGrid, a postback or AJAX postback will automatically collapse the detailtableviews in the mastertableview. If you want to keep the the current detailview expanded use:</p>          <p class="MsoNormal"><span lang="EN-US">             <br /></span><span style="line-height: 115%; font-family: ; color: green; font-size: 10pt" lang="EN-US">&#160;&#160;&#160;&#160;&#160; // Get current ScoreListId from DropDownList              <br /></span><span style="line-height: 115%; font-family: ; font-size: 10pt" lang="EN-US"><span>&#160;&#160;&#160;&#160;&#160; </span><span style="color: #2b91af">DropDownList</span> ddl = ((<span style="color: #2b91af">DropDownList</span>)sender);               <br />              <br /><span>&#160;&#160;&#160;&#160;&#160; </span><span style="color: green">// code ....                <br />                <br />                <br /></span><span>&#160;&#160;&#160;&#160;&#160; </span><span style="color: green">// Update only the current ScoreList in the RadGrid with the updated data, by fireing the RadGrid_NeedDataSource event                <br /></span><span>&#160;&#160;&#160;&#160;&#160; </span>((<span style="color: #2b91af">GridDataItem</span>)ddl.Parent.Parent).OwnerTableView.Rebind();               <br />              <br /><span>&#160;&#160;&#160;&#160;&#160; </span><span style="color: green">// The rebind will collapse the current griditem, so expand it again.                <br /></span><span>&#160;&#160;&#160;&#160;&#160; </span>((<span style="color: #2b91af">GridDataItem</span>)ddl.Parent.Parent).OwnerTableView.ParentItem.Expanded = <span style="color: blue">true</span>;</span><span lang="EN-US"> </span></p>       </div>     </div>   </div> </div>

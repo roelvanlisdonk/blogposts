@@ -1,0 +1,12 @@
+---
+ID: 1965
+post_title: 'Solving: Error : rsAccessDenied (The permissions granted to user &#8216;MyDomain\Administrator&#8217; are insufficient for performing this operation.)'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2011/04/11/solving-error-rsaccessdenied-the-permissions-granted-to-user-mydomainadministrator-are-insufficient-for-performing-this-operation/
+published: true
+post_date: 2011-04-11 12:46:09
+---
+<p>When deploying reports by using the rs.exe you can get the error: &quot;Error : rsAccessDenied (The permissions granted to user 'MyDomain\Administrator' are insufficient for performing this operation.)&quot;. </p>  <p>&#160;</p>  <p><strong>Solution</strong></p>  <ul>   <li>Go to the ReportManager [<a title="http://ansqlrw205/Reports/Pages/Folder.aspx" href="http://YoureServerName/Reports/Pages/Folder.aspx">http://YoureServerName/Reports/Pages/Folder.aspx</a>] </li>    <li>Site Settings (on top of the page)</li>    <li>Security</li>    <li>Add you’re account to the role [System Administrator]</li> </ul>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/04/image.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/04/image_thumb.png" width="698" height="397" /></a></p>  <p>&#160;</p>  <ul>   <li>Go to the home folder</li>    <li>Go to Properties</li>    <li>Security</li>    <li>Add you’re account to the roles [Browser, Content Manager, My Reports, Publisher, Report Builder]</li> </ul>  <p>If the security chain is broken in the subfolders you will have to repeat the steps for each subfolder</p>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/04/image1.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/04/image_thumb1.png" width="680" height="469" /></a></p>

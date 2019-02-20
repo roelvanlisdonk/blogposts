@@ -1,0 +1,12 @@
+---
+ID: 1917
+post_title: 'Use you&rsquo;re touchpad on you&rsquo;re laptop for vertical scrolling in a Browser'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2011/03/23/use-youre-touchpad-on-youre-laptop-for-vertical-scrolling-in-a-browser/
+published: true
+post_date: 2011-03-23 12:55:32
+---
+<p>To scroll vertical in a Browser I always hold down the left button beneath the touchpad and used my other fingers to scroll, but what I wanted is just a space on the touchpad which I could use to “swipe” en scroll vertical.</p>  <p>The other area could then be used to control the mouse.</p>  <p>&#160;</p>  <p>A colleague of my showed me, this could be done since the middle ages, just use the driver of you’re touch pad.</p>  <p>&#160;</p>  <p>Go to Start &gt; Control Panel &gt; Mouse:</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/03/image.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/03/image_thumb.png" width="595" height="593" /></a></p>  <p>   <br />Click on [Settings…]    <br /></p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/03/image1.png"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/03/image_thumb1.png" width="594" height="442" /></a></p>  <p>   <br />Click on Virtual Scrolling &gt; Scrolling Region and set the with of the area which will be used to scroll vertical or horizontal. In for example you’re browser.</p>  <p>&#160;</p>  <p>   <br /><strong>Note</strong></p>  <p>- Every Touchpad manufacturer will have it’s own driver and driver settings, so the screen dumps might not reflect you’re settings.</p>  <p>- I also disabled tabbing and removed the tray icon from the taskbar   </p>

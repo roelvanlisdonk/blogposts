@@ -1,0 +1,12 @@
+---
+ID: 2325
+post_title: 'Solving: Windows Authentication fails, when using a host header and accessing IIS on the local box.'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2011/12/28/solving-windows-authentication-fails-when-using-a-host-header-and-accessing-iis-on-the-local-box/
+published: true
+post_date: 2011-12-28 11:12:27
+---
+<p align="left">If you are developing an ASP .NET website that uses Windows Authentication and add a host header in IIS to the ASP .NET web application, accessing the site on the local box, might not work. Windows Authentication will fail if the loopback check is not disabled. By default, loopback check functionality is turned on in Windows Server 2003 SP1 and later. So if you add an entry to the Windows hosts file, found in [C:\Windows\System32\drivers\etc], like:</p>  <p align="left">127.0.0.1&#160;&#160;&#160;&#160; dev.com</p>  <p align="left">And access the ASP .NET web application on the local box, by using the hostheader: <a href="http://dev.com/MyWebApplicaiton/Default.aspx">http://dev.com/MyWebApplicaiton/Default.aspx</a> make sure the loopback check is disabled:</p>  <p align="left">&#160;</p>  <ol>   <li>Click Start, click Run, type regedit, and then click OK.</li>    <li>Locate and then click the following registry subkey: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa</li>    <li>Right-click Lsa, point to New, and then click DWORD Value.</li>    <li>Type DisableLoopbackCheck, and then press ENTER.</li>    <li>Right-click DisableLoopbackCheck, and then click Modify.</li>    <li>In the Value data box, type 1, and then click OK.</li>    <li>Exit Registry Editor.</li>    <li>Restart the computer. Note You must restart the server for this change to take effect</li> </ol>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/12/image16.png" rel="lightbox"><img style="background-image: none; border-bottom: 0px; border-left: 0px; margin: 0px 5px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2011/12/image_thumb16.png" width="580" height="150" /></a></p>

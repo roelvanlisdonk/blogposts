@@ -1,0 +1,15 @@
+---
+ID: 999
+post_title: >
+  Short cut for pasting unformatted text,
+  with the default paste options in
+  Microsoft Office 2010
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2010/01/20/short-cut-for-pasting-unformatted-text-with-the-default-paste-options-in-microsoft-office-2010/
+published: true
+post_date: 2010-01-20 10:15:10
+---
+<p>In most cases when I copy text from a source document or website and want to paste this text in Microsoft Office Outlook or Microsoft Office Word, I want the text to be formatted like the destination document (pasting as unformatted text). Previously I used two methods to accomplish this:</p>  <ul>   <li>Paste &gt; Paste Special &gt; Unformatted Text &gt; OK ( 4 clicks) </li>    <li>Notepad ctrl+a then ctrl+v the ctrl+a and then ctrl+c (1 click but many key presses) </li> </ul>  <p><strong>Paste special dialog</strong></p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/01/image28.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/01/image_thumb28.png" width="438" height="294" /></a></p>  <p>In Microsoft Office 2010 (and perhaps in older Microsoft Office versions) you can now set default paste options to unformatted text. The pasted text will be formatted like the destination document</p>  <p>In Microsoft Office Word 2010</p>  <ul>   <li>File &gt; Options &gt; Advanced &gt; [Cut, copy and paste] section &gt; Keep Text Only </li> </ul>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/01/image29.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/01/image_thumb29.png" width="603" height="497" /></a></p>  <p>In Microsoft Office Outlook 2010</p>  <ul>   <li>Open a new mail message </li>    <li>File &gt; Options &gt; Mail &gt; Editor Options &gt; Advanced &gt; [Cut, copy and paste] section &gt; Keep Text Only </li> </ul>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/01/image30.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/01/image_thumb30.png" width="599" height="490" /></a></p>  <p>When you paste text in you’re mail or word document, it will be formatted like the mail or document.</p>  <p>&#160;</p>  <p><strong>Microsoft Office 2010 OneNote</strong></p>  <ul>   <li>In<strong> </strong>Microsoft Office 2010 OneNote, you can use the [Contenxt Menu Key] + T, instead of [CTRL + V] to paste unformatted text.</li>    <li>Or use alt + h + v + t</li> </ul>

@@ -1,0 +1,14 @@
+---
+ID: 4865
+post_title: >
+  How to convert a function definition as
+  string to code in JavaScript
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2016/04/25/how-to-convert-a-function-definition-as-string-to-code-in-javascript/
+published: true
+post_date: 2016-04-25 15:03:31
+---
+<p>&nbsp;</p> <p>Just a snippet for converting a function as string to code:</p> <p><a href="https://www.roelvanlisdonk.nl/wp-content/uploads/2016/04/image.png" rel="lightbox"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="https://www.roelvanlisdonk.nl/wp-content/uploads/2016/04/image_thumb.png" width="824" height="558"></a></p> <p>&nbsp;</p> <p><strong>Code</strong></p> <p>&lt;!doctype html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8" /&gt;<br>&nbsp;&nbsp;&nbsp; &lt;meta http-equiv="x-ua-compatible" content="ie=edge"&gt;<br>&nbsp;&nbsp;&nbsp; &lt;title&gt;Research&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp; &lt;meta name="description" content="A page to quickly spike some code or styling."&gt;<br>&nbsp;&nbsp;&nbsp; &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>&nbsp;&nbsp;&nbsp; &lt;link rel="icon" href="data:;base64,iVBORw0KGgo="&gt;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; &lt;style&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&nbsp;&nbsp;&nbsp; &lt;script&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Define a function as a string.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Don't forget the "(" and the ")" arround the function.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // See: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var functionAsString = "(function(a, b){ return a + b; })";</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Convert a string containing a function definition to a real function.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var fn = eval(functionAsString);</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Execute the created function.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var result = fn(1, 2);</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Log result is: 3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.log(result); <br>&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</p>

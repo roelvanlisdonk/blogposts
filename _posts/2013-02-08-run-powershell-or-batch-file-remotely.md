@@ -1,0 +1,12 @@
+---
+ID: 3162
+post_title: Run PowerShell or batch file remotely
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2013/02/08/run-powershell-or-batch-file-remotely/
+published: true
+post_date: 2013-02-08 11:33:07
+---
+<p>&#160;</p>  <p><strong>To configure Windows PowerShell to receive remote commands in DEV</strong></p>  <p><a href="http://www.howtogeek.com/117192/how-to-run-powershell-commands-on-remote-computers/">http://www.howtogeek.com/117192/how-to-run-powershell-commands-on-remote-computers/</a></p>  <ol>   <li>Start Windows PowerShell with the &quot;<strong>Run as administrator</strong>&quot; option.</li>    <li>On server: <strong>enable-psremoting</strong></li>    <li>On server: <strong>Set-ExecutionPolicy Unrestricted</strong></li>    <li>On server: <strong>Set-Item wsman:\localhost\client\trustedhosts *</strong> (allows any computer to connect)</li>    <li>On server: <strong>Restart-Service WinRM</strong></li>    <li>On client: <strong>Set-ExecutionPolicy Unrestricted</strong></li>    <li>On client: <strong>Set-Item wsman:\localhost\client\trustedhosts *</strong> (allows connections to any server)</li>    <li>On client: <strong>Restart-Service WinRM</strong></li> </ol>  <p><strong>To run single command</strong></p>  <p>On client: <strong>Invoke-Command -ComputerName yourserver.yourdomain.com -ScriptBlock { C:\ |dir }</strong></p>  <p>&#160;</p>  <p><strong>To run multiple commands</strong></p>  <p>On client: <strong>Enter-PSSession -ComputerName yourserver.yourdomain.com</strong></p>  <p>….</p>  <p>On client: <strong>Exit-PSSession</strong></p>  <p>&#160;</p>  <p align="left"><strong>To run a PowerShell script remotely from a client batch file</strong></p>  <p align="left">On client: create a &quot;<strong>C:\Local.bat</strong>&quot; file</p>  <p align="left">On client: create a &quot;<strong>C:\Remote.ps1</strong>&quot; file</p>  <p align="left">On client in the Remote.ps1 file: enter your powershell commands that will be executed remotely, like <strong>dir C:\</strong></p>  <p align="left">On client in the Local.bat file: <strong>@powershell -command &quot;Invoke-Command -ComputerName yourserver.yourdomain.com -FilePath &quot;&quot;C:\Remote.ps1&quot;&quot;&quot;</strong></p>  <p align="left"><strong>pause</strong></p>

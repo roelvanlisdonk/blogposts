@@ -1,0 +1,12 @@
+---
+ID: 1149
+post_title: 'Create local user account with [User must change password at next logon] and [Password never expires] set in PowerShell'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2010/03/23/create-local-user-account-with-user-must-change-password-at-next-logon-and-password-never-expires-set-in-powershell/
+published: true
+post_date: 2010-03-23 11:40:12
+---
+<p>If you want to create service accounts with PowerShell and the result must be like:   <br />    <br /></p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/03/image27.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/03/image_thumb27.png" width="454" height="504" /></a> </p>  <p>&#160;</p>  <p>Use this PowerShell script:</p>  <p>&#160;</p>  <p># To run this script use: &amp; &quot;C:\Users\rLisdonk\Desktop\ToServer\Test.ps1&quot; </p>  <p>$computerName = &quot;MyComputerName”   <br />$serviceAccountWebName = &quot;saAsaWeb&quot;    <br />$serviceAccountWebPassword = &quot;MyPassword123&quot; </p>  <p>&#160;</p>  <p>&quot;Get computer info&quot;   <br />$computer = [ADSI](&quot;WinNT://&quot; + $computerName + &quot;,computer&quot;) </p>  <p>&#160;</p>  <p>&quot;Determine if user [saAsaWeb] exists&quot;   <br />$serviceAccount = [ADSI](&quot;WinNT://&quot; + $computerName + &quot;/$serviceAccountWebName&quot; + &quot;,user&quot;)    <br />if(!$serviceAccount.Name)    <br />{    <br />&#160;&#160;&#160; &quot;Create user [saAsaWeb]&quot;    <br />&#160;&#160;&#160; $user = $computer.Create(&quot;user&quot;, $serviceAccountWebName)</p>  <p>   <br />&#160;&#160;&#160; &quot;Set password&quot;    <br />&#160;&#160;&#160; $user.SetPassword($serviceAccountWebPassword)    <br />&#160;&#160;&#160; $user.SetInfo()</p>  <p>   <br />&#160;&#160;&#160; &quot;Disable [User must change password at next logon]&quot;    <br />&#160;&#160;&#160; $user.PasswordExpired = 0    <br />&#160;&#160;&#160; $user.SetInfo()</p>  <p>   <br />&#160;&#160;&#160; &quot;Enable [Password never expires]&quot;    <br />&#160;&#160;&#160; $wmiuser = Get-WmiObject -class &quot;Win32_UserAccount&quot; -filter &quot;name='$serviceAccountWebName'&quot;    <br />&#160;&#160;&#160; $wmiuser.PasswordExpires = $false    <br />&#160;&#160;&#160; $wmiuser.Put()    <br />}</p>

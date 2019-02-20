@@ -1,0 +1,12 @@
+---
+ID: 3436
+post_title: 'Fix: The type initializer for &#8216;Microsoft.DataTransformationServices.Project.SharedIcons&#8217; threw an exception. (Microsoft Visual Studio 2012)'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2013/09/12/fix-the-type-initializer-for-microsoft-datatransformationservices-project-sharedicons-threw-an-exception-microsoft-visual-studio-2012/
+published: true
+post_date: 2013-09-12 08:32:02
+---
+<p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/09/image18.png" rel="lightbox"><img title="image" style="border-left-width: 0px; border-right-width: 0px; background-image: none; border-bottom-width: 0px; padding-top: 0px; padding-left: 0px; margin: 0px 5px; display: inline; padding-right: 0px; border-top-width: 0px" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/09/image_thumb18.png" width="580" height="218" /></a></p>  <p>&#160;</p>  <p>After some automatic Windows updates, I was unable to open my SSIS projects in Microsoft Visual Studio 2012.</p>  <p>The following error was shown: The type initializer for 'Microsoft.DataTransformationServices.Project.SharedIcons' threw an exception.</p>  <p>&#160;</p>  <p>After a google search, I found the following solution at: </p>  <p><a href="http://social.technet.microsoft.com/Forums/en-US/829e1fca-fbbf-43d8-bde5-202ad95e8643/the-type-initializer-for-microsoftdatatransformationservicesdesignsharedicons-threw-an">http://social.technet.microsoft.com/Forums/en-US/829e1fca-fbbf-43d8-bde5-202ad95e8643/the-type-initializer-for-microsoftdatatransformationservicesdesignsharedicons-threw-an</a></p>  <p>&#160;</p>  <p><strong>Solution</strong></p>  <p>Download and install <a title="http://support.microsoft.com/kb/2861107" href="http://support.microsoft.com/kb/2861107">http://support.microsoft.com/kb/2861107</a></p>  <p>SQLServer2012_SP1_CU5_2861107_11_0_3373_x64.</p>  <p>(The hotfix is 780MB, say what?!)</p>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/09/image19.png" rel="lightbox"><img title="image" style="border-top: 0px; border-right: 0px; background-image: none; border-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px 5px; border-left: 0px; display: inline; padding-right: 0px" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2013/09/image_thumb19.png" width="580" height="158" /></a></p>

@@ -1,0 +1,12 @@
+---
+ID: 1037
+post_title: 'Silverlight 3 How to resolve: Error Unknown element: OutOfBrowserSettings.WindowsSettings when enabeling out of browser mode'
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2010/02/19/silverlight-3-how-to-resolve-error-unknown-element-outofbrowsersettings-windowssettings-when-enabeling-out-of-browser-mode/
+published: true
+post_date: 2010-02-19 12:45:34
+---
+<p>If you get the an error when enabeling out fo browser mode in Silverlight 3, this is because you’re enabeling it in the wrong way. Don’t use the AppManifest.xml but the project properties and check the “Enable running application out of the browser”. This will generate a OutOfBrowserSettings.xml file, like:</p>  <p>&lt;OutOfBrowserSettings ShortName=&quot;TTS Toggle&quot; EnableGPUAcceleration=&quot;False&quot; ShowInstallMenuItem=&quot;True&quot;&gt;   <br />&#160; &lt;OutOfBrowserSettings.Blurb&gt;Download TTS Toggle&lt;/OutOfBrowserSettings.Blurb&gt;    <br />&#160; &lt;OutOfBrowserSettings.WindowSettings&gt;    <br />&#160;&#160;&#160; &lt;WindowSettings Title=&quot;TTS Toggle&quot; /&gt;    <br />&#160; &lt;/OutOfBrowserSettings.WindowSettings&gt;    <br />&#160; &lt;OutOfBrowserSettings.Icons /&gt;    <br />&lt;/OutOfBrowserSettings&gt;</p>  <p>&#160;</p>  <p><a href="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/02/image8.png"><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="image" border="0" alt="image" src="http://www.roelvanlisdonk.nl/wp-content/uploads/2010/02/image_thumb8.png" width="829" height="471" /></a> </p>  <p>&#160;</p>  <p>Error: Unhandled Error in Silverlight Application    <br />Code: 2007&#160;&#160;&#160; <br />Category: ParserError&#160;&#160;&#160;&#160;&#160;&#160; <br />Message: Unknown element: OutOfBrowserSettings.WindowsSettings.&#160;&#160;&#160;&#160; <br />File:&#160;&#160;&#160;&#160;&#160; <br />Line: 12&#160;&#160;&#160;&#160; <br />Position: 44&#160;&#160;&#160;&#160; </p>  <p>See: <a title="http://geekswithblogs.net/dlussier/archive/2009/09/17/134864.aspx" href="http://geekswithblogs.net/dlussier/archive/2009/09/17/134864.aspx">http://geekswithblogs.net/dlussier/archive/2009/09/17/134864.aspx</a></p>

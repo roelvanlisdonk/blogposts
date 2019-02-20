@@ -1,0 +1,14 @@
+---
+ID: 438
+post_title: >
+  How to dynamically number rows in a
+  SELECT Transact-SQL statement (TSQL)
+author: Roel van Lisdonk
+post_excerpt: ""
+layout: post
+permalink: >
+  https://www.roelvanlisdonk.nl/2009/05/22/how-to-dynamically-number-rows-in-a-select-transact-sql-statement-tsql/
+published: true
+post_date: 2009-05-22 13:23:02
+---
+<div class="padten">   <div class="ms-inputuserfield padfive seventyp">     <div>       <div class="ExternalClass101CA2B001A8421795041842A12FC3F8">         <p>           <br />see: <a title="http://support.microsoft.com/default.aspx?scid=KB;EN-US;q186133" href="http://support.microsoft.com/default.aspx?scid=KB;EN-US;q186133">http://support.microsoft.com/default.aspx?scid=KB;EN-US;q186133</a></p>          <p><strong>Example query</strong></p>         <span style="font-family: ; color: blue; font-size: 10pt" lang="EN-US">select</span><span style="font-family: ; font-size: 10pt" lang="EN-US">            <br /><span>&#160;&#160;&#160;&#160;&#160; </span>rank<span style="color: gray">()</span> <span style="color: blue">over</span> <span style="color: gray">(              <br /></span><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span><span style="color: blue">order</span> <span style="color: blue">by</span>             <br /><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span>sl<span style="color: gray">.</span>[Title]<span style="color: gray">,</span>             <br /><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span>sl<span style="color: gray">.</span>[Description]<span style="color: gray">,</span>             <br /><span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </span>sl<span style="color: gray">.</span>[Order]             <br /><span>&#160;&#160;&#160;&#160;&#160; </span><span style="color: gray">)</span> <span style="color: blue">as</span> rank<span style="color: gray">,</span>             <br /><span>&#160;&#160;&#160;&#160;&#160; </span>sl<span style="color: gray">.</span>[Title]<span style="color: gray">,</span>             <br /><span>&#160;&#160;&#160;&#160;&#160; </span>sl<span style="color: gray">.</span>[Description]<span style="color: gray">,</span> sl<span style="color: gray">.</span>[Order]             <br /></span><span style="font-family: ; color: blue; font-size: 10pt">from            <br /></span><span style="font-family: ; font-size: 10pt"><span>&#160;&#160;&#160;&#160;&#160; </span>[ScoreList] sl             <br /><span style="color: blue">order</span> <span style="color: blue">by</span> rank</span> </div>     </div>   </div> </div>
